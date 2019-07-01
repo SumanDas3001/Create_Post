@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 30
+  host: localhost
+  database: user_post_development
+  username: postgres
+  password: postgres
+  port: 5433
+
+
+  
+
