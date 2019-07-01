@@ -1,24 +1,15 @@
-# README
+# Build Rails App that provides user can create post
+> SRS
+- Create the authentication system using devise gem. User should be able to SignIn, SignUp and SignOut.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Authenticated User is able to create, update and delete a post. One User can create multiple posts.
 
-Things you may want to cover:
+- Post will contain Title, description, content, author name, created date, Post image(file).
 
-* Ruby version
+- In Post, Content field will have HTML editor (e.g. https://www.froala.com/wysiwyg-editor/inline), file upload.
 
-* System dependencies
+- User should be able to save the form and see all the posts with search and sort functionality.
 
-* Configuration
+- Add email functionality on Sign Up user.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Use Postgresql for Database.
