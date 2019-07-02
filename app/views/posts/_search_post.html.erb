@@ -1,3 +1,37 @@
-<div>
-	<% puts "sada sadad asda"%>
-</div>
+<% unless smart_listing.empty? %>
+	<table>
+		<thead>
+			<tr>
+				<th>Title<th>
+				<th>Description</th>
+				<th>Content</th>
+				<th>Author name</th>
+				<th>User</th>
+				<th colspan="3"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% smart_listing.collection.each do |object| %>
+				<tr>
+					<td><%= object.title %></td>
+					<td><%= object.description %></td>
+					<td><%= raw(object.content) %></td>
+					<td><%= object.author_name %></td>
+					<td><%= object.user.username %></td>
+					<td><%= image_tag object.post_image.url(:thumb)%></td>
+					<td><%= link_to 'Show', post_path(object) %></td>
+					<td><%= link_to 'Edit', edit_post_path(object) %></td>
+					<td><%= link_to 'Destroy', object , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<br>
+
+	<%= link_to 'New Post', new_post_path %>
+	
+<% else %>
+	<% puts "----------  else --------- "%>
+<% end %>
+
