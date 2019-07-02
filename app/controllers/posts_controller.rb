@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @posts = Post.find_by_title(params[:filter_post_name]) if params[:filter_post_name].present?
+    # smart_listing_create :posts, @posts, partial: "posts/search_post", default_sort: { created_at: "desc" }
   end
 
   # GET /posts/1
