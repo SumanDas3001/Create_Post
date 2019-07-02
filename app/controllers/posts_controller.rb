@@ -9,7 +9,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.order("id desc")
     @posts = Post.where("title=?", params[:filter_post_name]) if params[:filter_post_name].present?
-    puts @posts.inspect
     smart_listing_create :posts, @posts, partial: "posts/search_post", default_sort: { created_at: "desc" }
   end
 
@@ -36,6 +35,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     respond_to do |format|
       if @post.save
+        # Send Email
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
