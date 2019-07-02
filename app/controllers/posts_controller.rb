@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  include SmartListing::Helper::ControllerExtensions
+  helper  SmartListing::Helper
+
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
+    @posts = Post.find_by_title(params[:filter_post_name]) if params[:filter_post_name].present?
   end
 
   # GET /posts/1

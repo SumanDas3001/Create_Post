@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= render 'search_post' %>
+
 <h1>Posts</h1>
 
 <table>
@@ -15,19 +17,7 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <td><%= raw(post.content) %></td>
-        <td><%= post.author_name %></td>
-        <td><%= post.user.username %></td>
-        <td><%= image_tag post.post_image.url(:thumb)%></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= @posts.inspect %>
   </tbody>
 </table>
 

@@ -15,6 +15,7 @@ gem "paperclip"
 # gem 'wysiwyg-rails' for html text editor
 gem 'wysiwyg-rails'
 gem 'ckeditor'
+gem "smart_listing"
 # font-awesome-rails" gem
 gem "font-awesome-rails"
 # Use Puma as the app server

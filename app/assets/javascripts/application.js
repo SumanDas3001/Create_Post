@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require smart_listing
 //= require rails-ujs
 //= require froala_editor.min.js
 //= require activestorage
