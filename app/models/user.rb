@@ -6,5 +6,12 @@ class User < ApplicationRecord
 
   # model association
   has_many :posts, dependent: :destroy
+  after_create :send_email_to_author
+
+  def send_email_to_author
+    puts "mnmn saa saa"
+    UserMailer.signup_confirmation(self.email, self.username).deliver
+  end
+
 
 end
