@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'
 # Authentication gem
 gem 'devise'
+# paperclip gem for file upload or image upload
+gem "paperclip"
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_02_045816) do
+ActiveRecord::Schema.define(version: 2019_07_02_051939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 2019_07_02_045816) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "post_image_file_name"
+    t.string "post_image_content_type"
+    t.bigint "post_image_file_size"
+    t.datetime "post_image_updated_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -35,6 +39,10 @@ ActiveRecord::Schema.define(version: 2019_07_02_045816) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
+    t.string "post_image_file_name"
+    t.string "post_image_content_type"
+    t.bigint "post_image_file_size"
+    t.datetime "post_image_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
