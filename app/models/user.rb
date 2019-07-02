@@ -7,5 +7,4 @@ class User < ApplicationRecord
   # model association
   has_many :posts, dependent: :destroy
 
-  validates_presence_of :title, :description, :content, :author_name
 end
