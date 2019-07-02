@@ -19,7 +19,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.description %></td>
-        <td><%= post.content %></td>
+        <td><%= raw(post.content) %></td>
         <td><%= post.author_name %></td>
         <td><%= post.user.username %></td>
         <td><%= image_tag post.post_image.url(:thumb)%></td>

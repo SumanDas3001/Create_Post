@@ -5,12 +5,18 @@ ruby '2.6.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
+gem 'jquery-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Authentication gem
 gem 'devise'
 # paperclip gem for file upload or image upload
 gem "paperclip"
+# gem 'wysiwyg-rails' for html text editor
+gem 'wysiwyg-rails'
+gem 'ckeditor'
+# font-awesome-rails" gem
+gem "font-awesome-rails"
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
