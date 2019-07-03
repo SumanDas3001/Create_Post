@@ -6,7 +6,7 @@ development:
   database: user_post_development
   username: postgres
   password: postgres
-  port: 5433
+  # port: 5433
 
 
   
