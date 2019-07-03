@@ -17,8 +17,22 @@
   </head>
 
   <body>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div id="main_content">
+      <div id="header">
+        <% if user_signed_in? %>
+          <div class="buttons">
+            <strong><%= link_to "New Posts", new_post_path%></strong> |
+            <strong><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></strong>
+          </div>
+        <% end %>
+      </div>
+      <% flash.each  do |name, msg| %>
+        <div>
+          <strong><%= content_tag(:div, msg, class: "alert alert-info") %></strong>
+        </div>
+      <% end %>
+        <br><%= yield %>
+    </div>
   </body>
+
 </html>
